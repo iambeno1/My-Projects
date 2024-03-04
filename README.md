@@ -1,1 +1,1 @@
-## Mini Projects Web I Created
+## List of Small Web Projects I Created

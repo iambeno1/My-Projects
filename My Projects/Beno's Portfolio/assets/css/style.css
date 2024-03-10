@@ -1,59 +1,81 @@
 /* ===============Hero Section=============== */
 /* Jumbotron */
-.jumbotron{
-    padding: 2rem 4rem;
-    background-color: #e6f0ff;
+.jumbotron {
+  padding: 2rem 4rem;
+  background-color: #e6f0ff;
 }
 
 /* Typewriter : https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
-.animated-text{
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
+.animated-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
 }
 
-.animated-text span{
-    position: relative;
+.animated-text span {
+  position: relative;
 }
 
-.animated-text span::before{
-    content: "Student";
-    color: #0066ff;
-    animation: words 20s infinite;
+.animated-text span::before {
+  content: "I'm a Student";
+  color: #0066ff;
+  animation: words 20s infinite;
 }
 
-.animated-text span::after{
-    content: "";
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    background-color: #e6f0ff;
-    border-left: 2px solid #0066ff;
-    right: -8px;
-    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+.animated-text span::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 105%;
+  background-color: #e6f0ff;
+  border-left: 2px solid #0066ff;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
-    to{
-        border-left: 2px solid #ff7f5000;
-    }
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
 }
 
 @keyframes words {
-    0%,20%{
-        content: "Student";
-    }
-    21%,40%{
-        content: "Developer";
-    }
-    
+  0%,
+  20% {
+    content: "I'm a Student";
+  }
+  21%,
+  40% {
+    content: 'I Love Coding';
+  }
+  41%,
+  60% {
+    content: 'I Love Algorithm';
+  }
 }
 
 @keyframes typing {
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-        width: 0;
-    }
-    5%,20%,25%,40%,45%,60%,65%,80%,85%{
-        width: calc(100% + 8px);
-    }
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
 }

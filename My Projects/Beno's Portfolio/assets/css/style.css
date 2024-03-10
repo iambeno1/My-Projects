@@ -4,8 +4,6 @@ body {
 }
 /* Jumbotron */
 .jumbotron {
-  height: 100vh;
-  padding: 2rem 4rem;
   background-color: #e6f0ff;
 }
 
@@ -22,7 +20,7 @@ body {
 
 .animated-text span::before {
   content: "I'm a Student";
-  color: #0066ff;
+  color: #6f42c1;
   animation: words 20s infinite;
 }
 
@@ -32,7 +30,7 @@ body {
   width: calc(100% + 8px);
   height: 105%;
   background-color: #e6f0ff;
-  border-left: 2px solid #0066ff;
+  border-left: 2px solid #6f42c1;
   right: -8px;
   animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
 }

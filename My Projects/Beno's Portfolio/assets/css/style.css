@@ -81,3 +81,8 @@ body {
     width: calc(100% + 8px);
   }
 }
+
+/* Projects */
+#projects {
+  background-color: #e6f0ff;
+}

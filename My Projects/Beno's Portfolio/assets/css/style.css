@@ -1,7 +1,4 @@
 /* ===============Hero Section=============== */
-body {
-  min-height: 5000px;
-}
 /* Jumbotron */
 .jumbotron {
   background-color: #e6f0ff;
@@ -84,5 +81,10 @@ body {
 
 /* Projects */
 #projects {
+  background-color: #e6f0ff;
+}
+
+/* Contact */
+#contact {
   background-color: #e6f0ff;
 }

@@ -12,12 +12,15 @@
     <!-- ===============Bootstrap CSS=============== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+    <!-- ===============Bootstrap Icons=============== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
     <!-- ===============CSS=============== -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body id="home">
     <!-- ===============Navbar=============== -->
-    <nav class="navbar navbar-dark bg-primary navbar-expand-xl shadow-sm">
+    <nav class="navbar navbar-dark bg-primary navbar-expand-xl shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="assets/img/logo.png" alt="Beno's Logo" width="50" height="44" class="d-inline-block align-text-top" />
@@ -28,19 +31,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link active" aria-current="page" href="#blogs">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -50,14 +53,14 @@
     <!-- ===============Main=============== -->
 
     <!-- Jumbotron -->
-    <section class="jumbotron">
-      <div class="row justify-content-evenly ps-5 ms-1">
+    <section class="jumbotron pt-5">
+      <div class="row justify-content-evenly ps-5 ms-1 pt-5">
         <div class="col-sm-5 col-md-6 pt-5">
           <h3 class="display-6 fw-light">Hi there👋</h3>
           <h1 class="display-4 fw-normal">I'm Beno</h1>
           <div class="animated-text"><span></span></div>
-          <p class="lead fs-5 pt-2">Mahasiswa Ilmu Komputer dengan minat utama pada Web dan Mobile App Development.</p>
-          <a class="btn btn-primary btn-lg mt-4" href="#" role="button">Download CV</a>
+          <p class="lead fs-5 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa, corporis veniam itaque aliquam commodi!</p>
+          <a class="btn btn-primary btn-lg mt-4" href="CV_Benony Gabriel.pdf" download="" role="button">Download CV</a>
         </div>
         <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
           <img src="assets/img/profil1.png" alt="Beno's profile" class="img-fluit float-right w-75 h-auto pt-5 ps-5 ms-5" />
@@ -73,8 +76,8 @@
     </section>
 
     <!-- ===============About=============== -->
-    <section id="about">
-      <div class="container">
+    <section id="about" class="pt-5">
+      <div class="container pt-5">
         <div class="row text-center">
           <div class="col">
             <h2>About Me</h2>
@@ -102,8 +105,8 @@
     </section>
 
     <!-- ===============Projects=============== -->
-    <section id="projects">
-      <div class="container">
+    <section id="projects" class="pt-5">
+      <div class="container pt-5">
         <div class="row text-center">
           <div class="col">
             <h2>My Projects</h2>
@@ -118,8 +121,8 @@
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cum?</p>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-secondary">Code</button>
-                <button type="button" class="btn btn-primary">Preview</button>
+                <a class="btn btn-secondary btn-md mt-4" href="https://github.com/iambeno1/My-Projects/tree/main/My%20Projects/Countdown%20Timer" target="_blank" role="button">Code</a>
+                <a class="btn btn-primary btn-md mt-4" href="https://countdown-timer-iambeno.vercel.app/" target="_blank" role="button">Preview</a>
               </div>
             </div>
           </div>
@@ -131,8 +134,8 @@
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cum?</p>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-secondary">Code</button>
-                <button type="button" class="btn btn-primary">Preview</button>
+                <a class="btn btn-secondary btn-md mt-4" href="https://github.com/iambeno1/My-Projects/tree/main/My%20Projects/Kedai%20Kopi" target="_blank" role="button">Code</a>
+                <a class="btn btn-primary btn-md mt-4" href="https://kedai-kopi-iambeno.vercel.app/" target="_blank" role="button">Preview</a>
               </div>
             </div>
           </div>
@@ -144,8 +147,8 @@
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cum?</p>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-secondary">Code</button>
-                <button type="button" class="btn btn-primary">Preview</button>
+                <a class="btn btn-secondary btn-md mt-4" href="https://github.com/iambeno1/My-Projects/tree/main/My%20Projects/Travel" target="_blank" role="button">Code</a>
+                <a class="btn btn-primary btn-md mt-4" href="https://travel-lilac-three.vercel.app/" target="_blank" role="button">Preview</a>
               </div>
             </div>
           </div>
@@ -157,8 +160,8 @@
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cum?</p>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-secondary">Code</button>
-                <button type="button" class="btn btn-primary">Preview</button>
+                <a class="btn btn-secondary btn-md mt-4" href="https://github.com/iambeno1/Belajar-DSA-Cpp/blob/main/Tugas_Besar/Kelompok_6_code.cpp" target="_blank" role="button">Code</a>
+                <a class="btn btn-primary btn-md mt-4" href="https://github.com/iambeno1/Belajar-DSA-Cpp/blob/main/Tugas_Besar/Kelompok_6_code.cpp" target="_blank" role="button">Preview</a>
               </div>
             </div>
           </div>
@@ -170,8 +173,8 @@
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cum?</p>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-secondary">Code</button>
-                <button type="button" class="btn btn-primary">Preview</button>
+                <a class="btn btn-secondary btn-md mt-4" href="https://github.com/iambeno1/Fundamentals-Cpp/tree/main/Tubes" target="_blank" role="button">Code</a>
+                <a class="btn btn-primary btn-md mt-4" href="https://github.com/iambeno1/Fundamentals-Cpp/tree/main/Tubes" target="_blank" role="button">Preview</a>
               </div>
             </div>
           </div>
@@ -187,53 +190,258 @@
     </section>
 
     <!-- ===============Blogs=============== -->
-    <section id="blogs">
-      <div class="container">
+    <section id="blogs" class="pt-5">
+      <div class="container pt-5">
         <div class="row text-center">
           <div class="col">
             <h2>Blogs</h2>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="assets/img/blogs/IMG_20230208_121025_HDR.jpg" class="img-fluid rounded-start" alt="Blog img" />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pengabdian Masyarakat</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="d-flex justify-content-center">
+          <div class="row mt-4">
+            <div class="col">
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/blogs/IMG_20230208_121025_HDR.jpg" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Pengabdian Masyarakat</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog1">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Pengabdian Masyarakat</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/blogs/IMG_20230208_121025_HDR.jpg" class="img-thumbnail" style="max-height: 500px" alt="Pengmas img" /></div>
+
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="assets/img/blogs/github.png" class="img-fluid rounded-start" alt="Blog img" />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Belajar GitHub</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/blogs/github.png" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Belajar Git & GitHub</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog2">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Belajar Git & GitHub</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/projects/4-manajemen-penjualan.jpg" class="img-thumbnail" style="max-height: 500px" alt="blog img" /></div>
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="assets/img/projects/4-manajemen-penjualan.jpg" class="img-fluid rounded-start" alt="Blog img" />
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/projects/4-manajemen-penjualan.jpg" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Tubes ASD</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog3">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Tubes ASD</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/projects/4-manajemen-penjualan.jpg" class="img-thumbnail" style="max-height: 500px" alt="Tubes ASD img" /></div>
+
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Tubes DSA C++</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/blogs/codewars.jpg" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">2024 Codewars Coding Challenge</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog4">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">2024 Codewars Coding Challenge</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/blogs/codewars.jpg" class="img-thumbnail" style="max-height: 500px" alt="Tubes ASD img" /></div>
+
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/blogs/PicsArt_01-29-02.14.59.jpg" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Aku Cinta Coding</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog5">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Aku Cinta Coding</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/blogs/PicsArt_01-29-02.14.59.jpg" class="img-thumbnail" style="max-height: 500px" alt="Tubes ASD img" /></div>
+
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" style="max-width: 800px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/blogs/old.jpg" class="img-fluid rounded-start" alt="Blog img" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Saya sudah tuah 😊</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium corporis asperiores eius explicabo molestiae.</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blog6">Baca</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="blog6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Saya sudah tuah 😊</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="text-center"><img src="assets/img/blogs/oldfull.jpg" class="img-thumbnail" style="max-height: 500px" alt="Tubes ASD img" /></div>
+
+                              <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque nostrum culpa at veniam deserunt, qui rerum, quos laborum iure quaerat, soluta beatae. Sapiente inventore deserunt, nam odio
+                                obcaecati delectus debitis ratione quidem labore tempora accusamus ex! Distinctio quis ex nam, quisquam magni, voluptates ut reprehenderit, hic voluptatum culpa cum in dolorum excepturi minus ab possimus
+                                voluptas nihil quia doloremque odio. Sequi voluptates cumque voluptate quae! Soluta eos nulla quis voluptatibus vitae enim id porro quo tenetur esse illum laudantium ab totam dignissimos distinctio, repellat
+                                eaque, veniam omnis! Quasi et veniam rem commodi. Beatae nihil porro velit qui ipsam mollitia?
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -241,9 +449,60 @@
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e6f0ff"
+          fill-opacity="1"
+          d="M0,96L48,117.3C96,139,192,181,288,181.3C384,181,480,139,576,122.7C672,107,768,117,864,144C960,171,1056,213,1152,245.3C1248,277,1344,299,1392,309.3L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- ===============Contacts=============== -->
+    <section id="contact" class="pt-5">
+      <div class="container pt-5">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama kamu</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,229.3C672,245,768,267,864,245.3C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
     <!-- ===============Footer=============== -->
+    <footer class="bg-primary text-center text-white">
+      <p class="p-5">
+        <a href="https://www.instagram.com/benogabriel_27/" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a
+        ><a href="https://twitter.com/iambeno_" target="_blank" class="text-white"><i class="bi bi-twitter-x ps-4 pe-4"></i></a><a href="https://github.com/iambeno1" target="_blank" class="text-white"><i class="bi bi-github"></i></a
+        ><br /><br />Created by <span class="fw-bold">Benony Gabriel</span> © | 2024
+      </p>
+    </footer>
 
     <!-- ===============Bootstrap JS=============== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

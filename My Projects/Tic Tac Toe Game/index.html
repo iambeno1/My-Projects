@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+
+    <!-- =============== FONTS =============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet" />
+
+    <!-- =============== CSS =============== -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- =============== Main =============== -->
+    <main>
+      <div class="container">
+        <h1 id="playerText">Tic Tac Toe</h1>
+        <div id="message"></div>
+        <div id="gameboard">
+          <div class="box" id="0"></div>
+          <div class="box" id="1"></div>
+          <div class="box" id="2"></div>
+          <div class="box" id="3"></div>
+          <div class="box" id="4"></div>
+          <div class="box" id="5"></div>
+          <div class="box" id="6"></div>
+          <div class="box" id="7"></div>
+          <div class="box" id="8"></div>
+        </div>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div>
+
+    <!-- =============== Footer =============== -->
+    <footer>
+      <p class="credits">
+        Created by <span><a href="https://github.com/iambeno1">Benony Gabriel</span></a> | © 2024
+      </p>
+    </footer>
+    
+    <!-- =============== JS =============== -->
+    <script src="assets/logic.js"></script>
+
+    <!-- =============== JS Confetti =============== -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </body>
+</html>

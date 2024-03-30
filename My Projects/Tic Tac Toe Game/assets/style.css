@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --main-color: #f2c14e;
+}
+
+body {
+  height: 100vh;
+  color: var(--main-color);
+  font-family: 'Finger Paint', cursive;
+  background-color: #37505c;
+}
+
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+#message {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #f2c14e;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#gameboard {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: #2c3f48;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+
+button {
+  margin-top: 80px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: #333;
+  border-color: var(--main-color);
+  font-size: 18px;
+  transition: 200ms transform;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  background-color: #d4aa49;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  color: rgb(1, 217, 217);
+}
+
+/* Styles for Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 30%;
+  border-radius: 10px;
+}
+
+#modalMessage {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-size: 3rem;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+  }
+
+  #modalMessage {
+    font-size: 20px;
+  }
+}

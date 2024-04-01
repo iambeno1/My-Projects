@@ -95,3 +95,36 @@ window.addEventListener('click', (event) => {
     closeModal();
   }
 });
+
+// Change Background Color
+const colors = ['#374b5c', '#375c5a', '#585c37', '#5c4337', '#5c374b', '#57375c', '#57375c', '#373a5c'];
+
+function changeBackgroundColor() {
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  document.body.style.backgroundColor = colors[randomIndex];
+}
+
+document.getElementById('changeColorButton').addEventListener('click', changeBackgroundColor);
+
+// Play Sound
+const musicButton = document.getElementById('btn--music');
+const audio = document.getElementById('music');
+
+musicButton.addEventListener('click', function () {
+  const icon = musicButton.querySelector('i');
+
+  // Toggle kelas ikon
+  if (icon.classList.contains('ri-volume-mute-line')) {
+    // Jika sedang dalam mode non-mute, ubah menjadi mode mute
+    icon.classList.remove('ri-volume-mute-line');
+    icon.classList.add('ri-music-2-line');
+    // Putar musik
+    audio.play();
+  } else {
+    // Jika sedang dalam mode mute, ubah menjadi mode non-mute
+    icon.classList.remove('ri-music-2-line');
+    icon.classList.add('ri-volume-mute-line');
+    // Hentikan musik
+    audio.pause();
+  }
+});

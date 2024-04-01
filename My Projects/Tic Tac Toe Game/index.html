@@ -8,11 +8,15 @@
     <!-- =============== FAV =============== -->
     <link rel="shortcut icon" href="./assets/fav.png" type="image/x-icon">
 
-
     <!-- =============== FONTS =============== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet" />
+
+    <!-- =============== ICON =============== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
 
     <!-- =============== CSS =============== -->
     <link rel="stylesheet" href="./assets/style.css" />
@@ -34,16 +38,25 @@
           <div class="box" id="7"></div>
           <div class="box" id="8"></div>
         </div>
-        <button id="restartBtn">Restart</button>
+        <div class="btn--group">
+          <!-- <button><i class="ri-volume-mute-line"></i></button> -->
+          <button id="btn--music"><i class="ri-music-2-line"></i></button>
+          <button id="restartBtn">Restart</button>
+          <button id="changeColorButton"><i class="ri-shuffle-line"></i></button>
+        </div>
       </div>
     </main>
 
+    <!-- Notif jika menang atau kalah-->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p id="modalMessage"></p>
       </div>
     </div>
+
+    <!-- Add Sound -->
+    <audio id="music" src="./assets/music.weba"></audio>
 
     <!-- =============== Footer =============== -->
     <footer>

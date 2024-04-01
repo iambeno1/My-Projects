@@ -15,6 +15,7 @@ body {
   color: var(--main-color);
   font-family: 'Finger Paint', cursive;
   background-color: #37385c;
+  transition: background-color 0.5s ease;
 }
 
 h1 {

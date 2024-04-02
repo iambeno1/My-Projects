@@ -9,86 +9,6 @@ let currentPlayer = 'O';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let gameOver = false;
 
-function evaluate(board) {
-  const winCombinations = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-
-  for (const combo of winCombinations) {
-    const [a, b, c] = combo;
-    if (board[a] === 'X' && board[b] === 'X' && board[c] === 'X') {
-      return 10;
-    }
-  }
-
-  for (const combo of winCombinations) {
-    const [a, b, c] = combo;
-    if (board[a] === 'O' && board[b] === 'O' && board[c] === 'O') {
-      return -10;
-    }
-  }
-
-  return 0;
-}
-
-function minimax(board, depth, isMaximizing) {
-  const score = evaluate(board);
-
-  if (score === 10 || score === -10) {
-    return score;
-  }
-
-  if (board.indexOf('') === -1) {
-    return 0;
-  }
-
-  if (isMaximizing) {
-    let bestScore = -Infinity;
-    for (let i = 0; i < board.length; i++) {
-      if (board[i] === '') {
-        board[i] = 'X';
-        bestScore = Math.max(bestScore, minimax(board, depth + 1, false));
-        board[i] = '';
-      }
-    }
-    return bestScore;
-  } else {
-    let bestScore = Infinity;
-    for (let i = 0; i < board.length; i++) {
-      if (board[i] === '') {
-        board[i] = 'O';
-        bestScore = Math.min(bestScore, minimax(board, depth + 1, true));
-        board[i] = '';
-      }
-    }
-    return bestScore;
-  }
-}
-
-function bestMove() {
-  let bestScore = -Infinity;
-  let move;
-  for (let i = 0; i < gameBoard.length; i++) {
-    if (gameBoard[i] === '') {
-      gameBoard[i] = 'X';
-      let score = minimax(gameBoard, 0, false);
-      gameBoard[i] = '';
-      if (score > bestScore) {
-        bestScore = score;
-        move = i;
-      }
-    }
-  }
-  return move;
-}
-
 function checkWinner() {
   const winCombinations = [
     [0, 1, 2],
@@ -106,6 +26,7 @@ function checkWinner() {
     if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
       gameOver = true;
       message.innerText = `${gameBoard[a]} wins!`;
+
       // Menambahkan efek confetti hanya jika pemain 'O' menang
       if (gameBoard[a] === 'O') {
         const jsConfetti = new JSConfetti();
@@ -121,8 +42,6 @@ function checkWinner() {
     gameOver = true;
     message.innerText = "It's a draw!";
     showModal("It's a draw!");
-
-    return;
   }
 }
 
@@ -132,16 +51,22 @@ function makeMove(index) {
     box[index].textContent = currentPlayer;
     currentPlayer = currentPlayer === 'O' ? 'X' : 'O';
     checkWinner();
-    if (!gameOver && currentPlayer === 'X') {
-      const index = bestMove();
-      makeMove(index);
-    }
   }
 }
 
 for (let i = 0; i < box.length; i++) {
   box[i].addEventListener('click', () => {
     makeMove(i);
+
+    // buat AI bermain di tempat random
+    if (!gameOver && currentPlayer === 'X') {
+      const emptyBox = gameBoard.reduce((acc, value, index) => {
+        if (!value) acc.push(index);
+        return acc;
+      }, []);
+      const randomIndex = emptyBox[Math.floor(Math.random() * emptyBox.length)];
+      makeMove(randomIndex);
+    }
   });
 }
 

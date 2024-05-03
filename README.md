@@ -1,5 +1,5 @@
 ## Daftar project-project kecil yang saya buat ✨
-Disini kamu bisa melihat daftar project yang telah saya buat 💻, ada berbagai jenis dan tema yang saya buat mulai dari website, game-game sederhana dan lainnya.
+Disini kamu bisa melihat daftar project yang telah saya buat 💻, ada berbagai jenis dan tema yang saya buat mulai dari website, game-game sederhana dan lainnya😀
 | No. | Judul | Teknologi | View | Source Code| Jenis | Keterangan |
 |-----|------------------|--------------|-----------|---------------|---------|----|
 | 1 | Countdown Timer | HTML, CSS, JS | <a href="https://countdown-timer-iambeno.vercel.app/">Preview</a> | <a href="https://github.com/iambeno1/Mini-Projects-Web/tree/main/My%20Projects/Countdown%20Timer">Source<a/> | Website | Penghitung waktu mundur |
